@@ -1,0 +1,48 @@
+1. Overview of the analysis: The purpose of this analysis select the applicants for funding with the best chance of success in their ventures in the nonprofit foundation Alphabet Soup
+
+2. Results: Using bulleted lists and images to support your answers, address the following questions:
+
+Data Preprocessing
+What variable(s) are the target(s) for your model?
+- Target variable was the IS_SUCCESSFUL column
+What variable(s) are the features for your model?
+- Every column that was not dropped were the features fed into the model
+What variable(s) should be removed from the input data because they are neither targets nor features?
+- 'EIN' & 'NAME'
+
+Compiling, Training, and Evaluating the Model
+How many neurons, layers, and activation functions did you select for your neural network model, and why?
+1. Starter Code:
+input_features = X_train_scaled.shape[1]
+hidden_node1 = 80
+hidden_node2 = 30
+2 activation functions: relu, sigmoid
+
+2. Optimized model 1:
+input_features = X_train_scaled.shape[1]
+hidden_node1 = 100
+hidden_node2 = 60
+hidden_node3 = 20
+hidden_node4 = 5
+3 activation functions: relu, sigmoid, tanh
+
+3. Optimized model 2:
+'num_layers': 5,
+activation': 'tanh'
+Layer 0 has 5 neurons.
+Layer 1 has 1 neurons.
+Layer 2 has 1 neurons.
+Layer 3 has 3 neurons.
+Layer 4 has 9 neurons.
+Layer 5 has 9 neurons.
+Layer 6 has 1 neurons.
+
+Were you able to achieve the target model performance?
+No (did not reach 75%)
+What steps did you take in your attempts to increase model performance?
+Optimized the model twice i.e removed features, different optimization methods (models, parameters etc.)
+
+3. Summary: Summarize the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and then explain your recommendation.
+- The each model were closer and closer to the target accuracy.
+- By including more data we can possible achieve a model with 75% accuracy. 
+
